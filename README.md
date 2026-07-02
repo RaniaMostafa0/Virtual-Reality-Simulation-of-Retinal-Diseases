@@ -2,7 +2,7 @@
 
 **A standalone Virtual Reality application that simulates the real-time visual symptoms of 12 retinal diseases, built with Unity and OpenCV for medical education, accessibility design, and public awareness.**
 
-[![Paper]([https://img.shields.io/badge/Paper-IEEE%20NILES%202025-blue](https://ieeexplore.ieee.org/document/11232445))]()
+[![Paper](https://img.shields.io/badge/Paper-IEEE%20NILES%202025-blue)](https://ieeexplore.ieee.org/document/11232445)
 
 ---
 
