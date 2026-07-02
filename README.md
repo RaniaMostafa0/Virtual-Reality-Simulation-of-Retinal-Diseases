@@ -46,6 +46,20 @@ Live Video Capture  →  Image Processing  →  VR Integration  →  User Intera
 3. Processed frames are rendered inside **Unity** and displayed back to the headset over **Oculus Link**.
 4. A VR GUI lets the user pick a disease and drag a severity slider to see it progress.
 
+## User Interface & Usability
+
+Through the Eye was built around a fully functional, VR-native GUI — no keyboard, no external screen, no technical setup required once the headset is on.
+
+- **How-To-Use panel** — shown before the main menu on first launch, walking new users through the Oculus controller functions so they're not lost on entry.
+- **Main Menu** — the central navigation hub, with four buttons: **Start** (opens the disease panel), **Project Overview**, **About Us**, and **Exit**.
+- **Disease Panel** — all 12 retinal conditions represented as individual buttons; selecting one opens an informational popup with condition context before the simulation starts.
+- **Severity Slider** — an analog control beneath the active simulation, letting users drag through a condition's progression in real time rather than seeing it as a fixed snapshot.
+- **Back Button** — available on every screen, so users are never stuck without removing the headset.
+- **Trigger-based selection** — all interaction is done via the Oculus controller trigger, keeping the control scheme to a single consistent action throughout.
+- **Audio feedback** — hover and click sounds on every button, plus a launch cue on the logo screen, giving multi-sensory confirmation of input — useful given that the app is actively simulating visual impairment while the user is trying to navigate it.
+
+The interface was deliberately kept low-clutter, with button size, spacing, and contrast tuned for visibility even during simulations that degrade the user's own vision (tunnel vision, blurring, central scotomas) — the UI has to stay usable under the exact conditions it's simulating.
+
 ### Simulation Techniques
 
 | Symptom | Technique |
@@ -62,8 +76,7 @@ Live Video Capture  →  Image Processing  →  VR Integration  →  User Intera
 | Hazy Overlays | Blur + white overlay blending |
 | Glare | Bright-region detection + Gaussian halo |
 
-Full mathematical formulations for each effect are in the [published paper](#).
-
+Full mathematical formulations for each effect are in the [published paper](https://ieeexplore.ieee.org/document/11232445).
 ---
 
 ## System Requirements
@@ -77,27 +90,30 @@ Full mathematical formulations for each effect are in the [published paper](#).
 
 **Software**
 - Unity **2023.x**
-- [OpenCVForUnity](https://assetstore.unity.com/packages/tools/integration/opencv-for-unity-21088) plugin *(Asset Store — not redistributed in this repo; you'll need your own license to open the project)*
+- [OpenCVForUnity](https://assetstore.unity.com/packages/tools/integration/opencv-for-unity-21088) plugin
 - Oculus/Meta Quest Link software
 
 ---
 
 ## Repository Structure
-├── AMD/                          # Age-Related Macular Degeneration simulation
-├── Cataracts/                    # Nuclear, Cortical, Traumatic, Posterior Subcapsular
+
+```
+├── AMD/                              # Age-Related Macular Degeneration simulation
+├── Cataracts/                        # Nuclear, Cortical, Traumatic, Posterior Subcapsular
 ├── Central Serous Chorioretinopathy/
 ├── Choroideremia/
-├── Diseases in Unity C#/         # Core C# disease scripts
-├── Diseases with Slider/         # Severity-slider-enabled variants
+├── Diseases in Unity C#/             # Core C# disease scripts
+├── Diseases with Slider/             # Severity-slider-enabled variants
 ├── Edge Detection/
 ├── Extras/
 ├── Hypertensive Retinopathy/
-├── Image Enhancement/            # Cataract visual-aid enhancement pipeline
+├── Image Enhancement/                # Cataract visual-aid enhancement pipeline
 ├── Macular Pucker/
 ├── Pathologic Myopia/
 ├── Retinitis Pigmentosa/
 ├── Stargardt/
 └── README.md
+```
 
 ---
 
