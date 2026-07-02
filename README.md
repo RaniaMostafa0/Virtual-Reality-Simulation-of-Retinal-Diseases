@@ -77,6 +77,7 @@ The interface was deliberately kept low-clutter, with button size, spacing, and 
 | Glare | Bright-region detection + Gaussian halo |
 
 Full mathematical formulations for each effect are in the [published paper](https://ieeexplore.ieee.org/document/11232445).
+
 ---
 
 ## System Requirements
